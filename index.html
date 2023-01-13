@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
+  <script src="script/theme.js" defer></script>
   <script src="script/main.js" defer></script>
   <title>Frontend Mentor | Calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 10px; text-align: center; }
-    .attribution a { color: hsl(0, 1%, 71%); }
+    .attribution {
+      font-size: 10px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(0, 1%, 71%);
+    }
   </style>
 </head>
+
 <body>
   <div class="calculator-grid">
     <div id="numbers">
@@ -26,42 +38,43 @@
       <p id="calc">calc</p>
       <p id="theme">THEME</p>
       <input type="checkbox" id="theme-toggler">
-	        <label id="theme-label" for="theme-toggler">
-            <div class="balls">
-              <span class="ball" id="one"></span>
-              <span class="ball" id="two"></span>
-              <span class="ball" id="three"></span>
-            </div>
-	        </label>
-    </div> 
+      <label id="theme-label" for="theme-toggler">
+        <div class="balls">
+          <span class="ball" id="one"></span>
+          <span class="ball" id="two"></span>
+          <span class="ball" id="three"></span>
+        </div>
+      </label>
+    </div>
     <div class="output">
-      <div class="previous-operand">123 +</div>
-      <div class="current-operand">456</div>
+      <div class="previous-operand" data-previous-operand></div>
+      <div class="current-operand" data-current-operand></div>
     </div>
     <div class="keypad">
-      <button class="btn-1">7</button>
-      <button class="btn-1">8</button>
-      <button class="btn-1">9</button>
-      <button class="btn-2">DEL</button>
-      <button class="btn-1">4</button>
-      <button class="btn-1">5</button>
-      <button class="btn-1">6</button>
-      <button class="btn-1">+</button>
-      <button class="btn-1">1</button>
-      <button class="btn-1">2</button>
-      <button class="btn-1">3</button>
-      <button class="btn-1">-</button>
-      <button class="btn-1">.</button>
-      <button class="btn-1">0</button>
-      <button class="btn-1">/</button>
-      <button class="btn-1">x</button>
-      <button class="span-two btn-2">RESET</button>
-      <button class="span-two btn-3"> = </button>
+      <button class="btn-1" data-number>7</button>
+      <button class="btn-1" data-number>8</button>
+      <button class="btn-1" data-number>9</button>
+      <button class="btn-2" data-delete>DEL</button>
+      <button class="btn-1" data-number>4</button>
+      <button class="btn-1" data-number>5</button>
+      <button class="btn-1" data-number>6</button>
+      <button class="btn-1" data-operation>+</button>
+      <button class="btn-1" data-number>1</button>
+      <button class="btn-1" data-number>2</button>
+      <button class="btn-1" data-number>3</button>
+      <button class="btn-1" data-operation>-</button>
+      <button class="btn-1" data-number>.</button>
+      <button class="btn-1" data-number>0</button>
+      <button class="btn-1" data-operation>/</button>
+      <button class="btn-1" data-operation>x</button>
+      <button class="span-two btn-2" data-reset>RESET</button>
+      <button class="span-two btn-3" data-equals> = </button>
     </div>
   </div>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Franco Chialvo</a>.
   </div>
 </body>
+
 </html>
