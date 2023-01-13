@@ -4,10 +4,11 @@
     font-weight: 700;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+html {
+height: 100%;
+}
+body {
+    min-height: 100%;
 }
 
 :root{
@@ -22,6 +23,8 @@ body{
     --key-shadow-color-3: hsl(28, 16%, 65%);
     --text-color-1: hsl(221, 14%, 31%);
     --text-color-2: hsl(0, 0%, 100%);
+    --text-color-3 : hsl(0, 0%, 100%);
+    --text-color-4 : hsl(0, 0%, 100%);
 }
 
 [data-theme="theme-2"]{
@@ -36,12 +39,15 @@ body{
     --key-shadow-color-3: hsl(35, 11%, 61%);
     --text-color-1: hsl(60, 10%, 19%);
     --text-color-2: hsl(0, 0%, 100%);
+    --text-color-3: hsl(60, 10%, 19%);
+    --text-color-4 : hsl(0, 0%, 100%);
 }
   
 
 [data-theme="theme-3"]{
     --bg-color: hsl(268, 75%, 9%);
     --keypad-color: hsl(268, 71%, 12%);
+    --screen-color: hsl(268, 71%, 12%);
     --key-bg-color-1: hsl(281, 89%, 26%);
     --key-shadow-color-1: hsl(285, 91%, 52%);
     --key-bg-color-2: hsl(176, 100%, 44%);
@@ -49,8 +55,9 @@ body{
     --key-bg-color-3: hsl(268, 47%, 21%);
     --key-shadow-color-3:  hsl(290, 70%, 36%);
     --text-color-1: hsl(52, 100%, 62%);
-    --text-color-2: hsl(198, 20%, 13%);
-    --text-color-3: hsl(0, 0%, 100%);
+    --text-color-2: hsl(0, 0%, 100%);
+    --text-color-3: hsl(52, 100%, 62%);
+    --text-color-4: hsl(198, 20%, 13%);
 }
   
 body{
@@ -65,7 +72,7 @@ body{
     align-content: center;
     min-height: 100vh;
     grid-template-columns: 430px;
-    grid-template-rows: 45px 100px 380px;
+    grid-template-rows: auto 45px 100px 350px;
     gap: 20px;
 }
 
@@ -100,18 +107,12 @@ body{
 }
 .keypad > button.btn-3{
     background-color: var(--key-bg-color-2);
-    color: var(--text-color-2);
+    color: var(--text-color-4);
     box-shadow: inset 0px -3px 0px 0px var(--key-shadow-color-2);
 }
 
-.keypad > button.btn-1:active{
-    background-color: #f7f0e9;
-}
-.keypad > button.btn-2:active{
-    background-color: #707da4;
-}
-.keypad > button.btn-3:active{
-    background-color: #dd4c3c;
+.keypad > button:active{
+    filter: brightness(110%);
 }
 
 .span-two{
@@ -132,12 +133,12 @@ body{
 }
 
 .output .previous-operand{
-    color: var(--text-color-1);
+    color: var(--text-color-3);
     font-size: 23px;
 }
 
 .output .current-operand{
-    color: var(--text-color-2);
+    color: var(--text-color-3);
     font-size: 38px;
 }
 
@@ -147,10 +148,8 @@ body{
     align-items: flex-end;
     margin-left: 2px;
     font-size: 25px;
-    color:white
+    color: var(--text-color-3);
 }
-
-/* THEME TOGGLER */
 
 #theme-toggler {
 	opacity: 0;
@@ -198,6 +197,55 @@ body{
 	left: 1.8em;
 }
 
-#calc{
-    margin: 0;
+#theme{
+    font-size: 12px;
+    margin: 0 0 2px 245px;
 }
+
+p{
+   margin: 0; 
+}
+
+#numbers{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: -48px;
+}
+
+.number{
+    padding: 6px;
+    color: var(--text-color-3)
+}
+
+@media (max-width: 768px) {
+    .calculator-grid{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        min-height: 100vh;
+        grid-template-columns: 350px;
+        grid-template-rows: auto 45px 100px 440px;
+        gap: 20px;
+    }
+    .keypad{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns:repeat(4,60px);
+        grid-template-rows: repeat(5, 65px);
+        gap: 20px;
+        background-color: var(--keypad-color);
+        padding: 20px;
+        border-radius: 6px;
+    }
+    #theme-label {
+        line-height: 0.2em;
+        width: 60px;
+        height: 0.9em;
+    }
+    #theme{
+        font-size: 12px;
+        margin: 0 0 2px 200px;
+    }
+  }

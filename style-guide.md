@@ -72,7 +72,7 @@ The designs were created to the following widths:
 - Pure cyan (key background, toggle): hsl(176, 100%, 44%)
 - Soft cyan (key shadow): hsl(177, 92%, 70%)
 
-- Very dark violet (key background): hsl(268, 47%, 21%)
+- Very dark violet (key background): hsl(268, 47%, 21%) 
 - Dark magenta (key shadow): hsl(290, 70%, 36%)
 
 #### Text
