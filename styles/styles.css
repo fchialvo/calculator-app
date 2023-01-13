@@ -13,6 +13,7 @@ body {
   min-height: 100%;
 }
 
+/* MAIN COLOR THEME */
 :root {
   --bg-color: hsl(222, 26%, 31%);
   --keypad-color: hsl(223, 31%, 20%);
@@ -29,6 +30,7 @@ body {
   --text-color-4: hsl(0, 0%, 100%);
 }
 
+/* SECOND COLOR THEME */
 [data-theme="theme-2"] {
   --bg-color: hsl(0, 0%, 90%);
   --keypad-color: hsl(0, 5%, 81%);
@@ -45,6 +47,7 @@ body {
   --text-color-4: hsl(0, 0%, 100%);
 }
 
+/* THIRD COLOR THEME */
 [data-theme="theme-3"] {
   --bg-color: hsl(268, 75%, 9%);
   --keypad-color: hsl(268, 71%, 12%);
@@ -152,6 +155,8 @@ body {
   color: var(--text-color-3);
 }
 
+/* THEME TOGGLE */
+
 #theme-toggler {
   opacity: 0;
   position: absolute;
@@ -219,6 +224,8 @@ p {
   color: var(--text-color-3);
 }
 
+
+/* FOR MOBILE */
 @media (max-width: 768px) {
   .calculator-grid {
     display: grid;
